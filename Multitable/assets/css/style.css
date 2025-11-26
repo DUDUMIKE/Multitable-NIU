@@ -1,0 +1,265 @@
+/* =====================================================
+   GLOBAL RESET & VARIABLES
+===================================================== */
+:root {
+  --primary: #C66A4A;
+  --dark: #111;
+  --light: #fff;
+  --gray: #666;
+  --gray-light: #ddd;
+  --btn-primary: #1f6feb;
+  --btn-warning: #ff7b00;
+  --btn-danger: #ff4d4d;
+  --font-main: 'Inter', system-ui, Arial;
+}
+
+body {
+  font-family: var(--font-main);
+  background:#f6f8fb;
+  margin:0;
+  color:#222;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.site-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+  background:var(--primary);
+  background-color: #111;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.logo {
+  display:flex;
+  gap:30px;
+  align-items:center;
+  color: white;
+}
+
+.logo-text h1 { font-size:30px; margin:0; color:var(--light); }
+.logo-text p { font-size:18px; margin:0; color:#f1f1f1; }
+
+.header-actions {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.header-actions a {
+  text-decoration:none;
+  color:white;
+}
+
+.header-actions a:hover { opacity:0.7; }
+
+/* =====================================================
+   HERO + FILTERS
+===================================================== */
+.hero {
+  text-align:center;
+  padding:24px 16px;
+  font-size:28px;
+}
+
+.filters {
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.filters input,
+.filters select {
+  padding:10px;
+  border-radius:8px;
+  border:1px solid var(--gray-light);
+}
+
+/* =====================================================
+   RESTAURANTS LIST
+===================================================== */
+.restaurants {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:16px;
+  padding:20px;
+}
+
+.restaurant-card {
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
+}
+
+.restaurant-card img {
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+
+.info {
+  padding:14px;
+}
+
+.info h3 {
+  margin:0 0 6px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.details { color:#666; font-size:13px; }
+.desc { color:#444; font-size:14px; margin-top:8px; }
+
+.table-line {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:12px;
+  border-top:1px dashed #eee;
+  padding-top:10px;
+}
+
+.table-meta strong { display:block; }
+.table-meta small { color:#666; }
+
+.table-actions { display:flex; gap:10px; align-items:center; }
+
+.table-actions a {
+  padding:8px 10px;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.table-actions a.view {
+  background:#f3f4f6;
+  color:#111;
+}
+
+.table-actions a.price {
+  background:#fff;
+  border:1px solid #eee;
+  color:#111;
+}
+
+/* =====================================================
+   AUTH FORMS
+===================================================== */
+.auth-box {
+  max-width:420px;
+  margin:60px auto;
+  background:#fff;
+  padding:24px;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.06);
+}
+
+.form-group { margin-bottom:12px; }
+
+input, textarea, select {
+  width:100%;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+.primary-btn {
+  display:inline-block;
+  background:var(--btn-primary);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.primary-btn:hover { opacity:.8; }
+
+.form-message.error {
+  background:#fff2f2;
+  color:#b00020;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-content {
+  background:#fff;
+  border-radius:12px;
+  max-width:420px;
+  width:92%;
+  padding:20px;
+  position:relative;
+}
+
+.close {
+  position:absolute;
+  right:12px;
+  top:10px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* =====================================================
+   EXTRAS MANAGEMENT
+===================================================== */
+.extras-list { list-style:none; padding:0; }
+
+.extra-item {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:8px 0;
+  border-bottom:1px solid #eee;
+}
+
+.remove-btn {
+  background:var(--btn-danger);
+  color:#fff;
+  border:none;
+  padding:4px 8px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.remove-btn:hover {
+  background:#d90000;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  background-color:var(--dark);
+  color:#ddd;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+
+
